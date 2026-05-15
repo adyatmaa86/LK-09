@@ -61,19 +61,19 @@
                 <!-- Right: Book Details -->
                 <div class="lg:col-span-7 p-8 lg:p-12">
                     <div class="mb-8">
-                        <span class="px-4 py-1.5 bg-indigo-50 text-indigo-600 text-xs font-black rounded-full uppercase tracking-widest mb-4 inline-block">
+                        <span class="px-4 py-1.5 bg-indigo-50 text-indigo-600 text-xs font-black rounded-full uppercase tracking-widest mb-4 inline-block cursor-default">
                             {{ $buku->category }}
                         </span>
-                        <h1 class="text-4xl lg:text-5xl font-black text-slate-900 leading-tight mb-4">{{ $buku->title }}</h1>
+                        <h1 class="text-4xl lg:text-5xl font-black text-slate-900 leading-tight mb-4 cursor-default">{{ $buku->title }}</h1>
                         <div class="flex items-center gap-4 text-slate-500">
-                            <span class="flex items-center">
+                            <span class="flex items-center cursor-default">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                                 </svg>
                                 {{ $buku->author }}
                             </span>
                             <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
-                            <span class="flex items-center">
+                            <span class="flex items-center cursor-default">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
@@ -84,23 +84,23 @@
 
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-sm font-black text-slate-900 uppercase tracking-widest mb-3 flex items-center">
-                                <span class="w-8 h-[2px] bg-indigo-600 mr-3"></span>
+                            <h3 class="text-sm font-black text-slate-900 uppercase tracking-widest mb-3 flex items-center cursor-default">
+                                <span class="w-2 h-[2px] bg-indigo-600 mr-2"></span>
                                 Sinopsis
                             </h3>
-                            <p class="text-lg text-slate-600 leading-relaxed">
+                            <p class="text-lg text-slate-600 leading-relaxed cursor-default">
                                 {{ $buku->description }}
                             </p>
                         </div>
 
                         <div class="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100">
                             <div>
-                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Penerbit</h4>
-                                <p class="text-lg font-bold text-slate-800">{{ $buku->publisher }}</p>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 cursor-default">Penerbit</h4>
+                                <p class="text-lg font-bold text-slate-800 cursor-default">{{ $buku->publisher }}</p>
                             </div>
                             <div>
-                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">ID Koleksi</h4>
-                                <p class="text-lg font-bold text-slate-800">#Book-{{ str_pad($buku->id, 5, '0', STR_PAD_LEFT) }}</p>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 cursor-default">ID Koleksi</h4>
+                                <p class="text-lg font-bold text-slate-800 cursor-default">#Book-{{ str_pad($buku->id, 5, '0', STR_PAD_LEFT) }}</p>
                             </div>
                         </div>
                     </div>

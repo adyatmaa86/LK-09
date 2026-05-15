@@ -20,8 +20,8 @@
         <div class="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/50 overflow-hidden border border-slate-100">
             <div class="p-8 sm:p-12">
                 <div class="mb-10">
-                    <h1 class="text-3xl font-bold text-slate-900 mb-2">Manajemen Data Buku Digital</h1>
-                    <p class="text-slate-500">Perbarui informasi buku <span class="font-bold text-indigo-600">"{{ $buku->title }}"</span>.</p>
+                    <h1 class="text-3xl font-bold text-slate-900 mb-2 cursor-default">Manajemen Data Buku Digital</h1>
+                    <p class="text-slate-500 cursor-default">Perbarui informasi buku <span class="font-bold text-indigo-600">"{{ $buku->title }}"</span>.</p>
                 </div>
 
                 <form action="{{ route('buku.update', $buku) }}" method="POST" enctype="multipart/form-data" class="space-y-8" novalidate>

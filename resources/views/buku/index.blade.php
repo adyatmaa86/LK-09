@@ -13,8 +13,8 @@
         <!-- Header Section -->
         <div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-6">
             <div>
-                <h1 class="text-4xl font-bold tracking-tight text-slate-900 mb-2">Manajemen Data Buku Digital</h1>
-                <p class="text-slate-500">Sistem Manajemen Data Buku Digital untuk Perpustakaan Digital.</p>
+                <h1 class="text-4xl font-bold tracking-tight text-slate-900 mb-2 cursor-default">Manajemen Data Buku Digital</h1>
+                <p class="text-slate-500 cursor-default">Sistem Manajemen Data Buku Digital untuk Perpustakaan Digital.</p>
             </div>
             <a href="{{ route('buku.create') }}" class="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg shadow-indigo-200 transform hover:-translate-y-1">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -114,17 +114,17 @@
                         </div>
                     @endif
                     <div class="absolute top-4 right-4">
-                        <span class="px-3 py-1 bg-white/90 glass text-indigo-600 text-xs font-bold rounded-full uppercase tracking-wider">
+                        <span class="px-3 py-1 bg-white/90 glass text-indigo-600 text-xs font-bold rounded-full uppercase tracking-wider cursor-default">
                             {{ $buku->category }}
                         </span>
                     </div>
                 </div>
                 <div class="p-6 flex flex-col flex-1">
                     <div class="mb-4">
-                        <p class="text-xs font-medium text-slate-400 mb-1">{{ $buku->author }} • {{ $buku->year }}</p>
-                        <h3 class="text-lg font-bold text-slate-900 leading-tight line-clamp-2 group-hover:text-indigo-600 transition-colors">{{ $buku->title }}</h3>
+                        <p class="text-xs font-medium text-slate-400 mb-1 cursor-default">{{ $buku->author }} • {{ $buku->year }}</p>
+                        <h3 class="text-lg font-bold text-slate-900 leading-tight line-clamp-2 group-hover:text-indigo-600 transition-colors cursor-default">{{ $buku->title }}</h3>
                     </div>
-                    <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-1">{{ $buku->description }}</p>
+                    <p class="text-sm text-slate-500 line-clamp-3 mb-6 flex-1 cursor-default">{{ $buku->description }}</p>
                     
                     <div class="flex items-center justify-between pt-4 border-t border-slate-50">
                         <div class="flex gap-2">
