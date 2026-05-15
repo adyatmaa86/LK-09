@@ -3,6 +3,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
+        "APP_KEY": "base64:hNaE1vzBIYmtSpYXxkq8Tv7P4hEdFFMQWJkFpL2DI1g=",
         "APP_TIMEZONE": "Asia/Jakarta",
         "APP_URL": "https://project-rlykt.vercel.app/",
         "APP_CONFIG_CACHE": "/tmp/config.php",
