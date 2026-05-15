@@ -3,6 +3,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
+        "APP_TIMEZONE": "Asia/Jakarta",
         "APP_URL": "https://project-rlykt.vercel.app/",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -33,7 +34,5 @@
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
-    ],
-
-    "outputDirectory": "public"
+    ]
 }
