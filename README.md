@@ -17,5 +17,6 @@
 5. Generate App Key: `php artisan key:generate`
 6. Sesuaikan setting database di file `.env`
 7. Jalankan migrasi: `php artisan migrate`
-8. Jalankan server: `php artisan serve`
+8. Jalankan storage link: `php artisan storage:link`
+9. Jalankan server: `php artisan serve`
 
