@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 <p align="center">
-    <img src="public/images/halamanU.png" width="800" alt="Halaman Utama AdyatmaBooks">
+    <img src="public/images/halamanU.png" width="500" alt="Halaman Utama AdyatmaBooks">
 </p>
 
 # LK-09
@@ -29,10 +29,10 @@
 ## Preview Aplikasi
 
 ### Halaman Tambah Buku
-![Tambah Buku](public/images/create.png)
+<img src="public/images/create.png" width="500" alt="Tambah Buku">
 
 ### Halaman Edit Buku
-![Edit Buku](public/images/edit.png)
+<img src="public/images/edit.png" width="500" alt="Edit Buku">
 
 ### Halaman Detail Buku
-![Detail Buku](public/images/show.png)
+<img src="public/images/show.png" width="500" alt="Detail Buku">
