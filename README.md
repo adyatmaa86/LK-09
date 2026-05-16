@@ -6,6 +6,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+<p align="center">
+    <img src="public/images/halamanU.png" width="800" alt="Halaman Utama AdyatmaBooks">
+</p>
 
 # LK-09
 
@@ -23,3 +26,13 @@
 11. Jalankan server: `php artisan serve`
 12. Jalankan server npm: `npm run dev` 
 
+## Preview Aplikasi
+
+### Halaman Tambah Buku
+![Tambah Buku](public/images/create.png)
+
+### Halaman Edit Buku
+![Edit Buku](public/images/edit.png)
+
+### Halaman Detail Buku
+![Detail Buku](public/images/show.png)
