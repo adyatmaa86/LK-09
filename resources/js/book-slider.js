@@ -25,23 +25,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Responsive breakpoints
             breakpoints: {
-                // when window width is >= 640px (sm)
-                640: {
-                    slidesPerView: 2,
-                    centeredSlides: false,
+                // Saat layar sangat kecil (di bawah 480px)
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // Saat layar sedikit lebih lebar (sm mobile/tablet portrait)
+                480: {
+                    slidesPerView: 1,
                     spaceBetween: 20
                 },
-                // when window width is >= 1024px (lg)
-                1024: {
-                    slidesPerView: 3,
-                    centeredSlides: false,
-                    spaceBetween: 30
-                },
-                // when window width is >= 1280px (xl)
-                1280: {
-                    slidesPerView: 4,
-                    centeredSlides: false,
-                    spaceBetween: 30
+                // Saat layar mendekati batas desktop (640px - 767px)
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    centeredSlides: false
                 }
             }
         });
