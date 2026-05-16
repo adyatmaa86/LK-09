@@ -1,28 +1,30 @@
-// Theme toggle logic for Navbar
+// Theme toggle logic for Navbar (Multiple buttons support)
 document.addEventListener('DOMContentLoaded', function() {
-    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
-    var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
+    const darkIcons = document.querySelectorAll('.theme-toggle-dark-icon');
+    const lightIcons = document.querySelectorAll('.theme-toggle-light-icon');
 
-    if (!themeToggleDarkIcon || !themeToggleLightIcon) return;
+    if (themeToggleBtns.length === 0) return;
 
-    // Set initial icon based on current theme
-    if (document.documentElement.classList.contains('dark')) {
-        themeToggleLightIcon.classList.remove('hidden');
-        themeToggleDarkIcon.classList.add('hidden');
-    } else {
-        themeToggleDarkIcon.classList.remove('hidden');
-        themeToggleLightIcon.classList.add('hidden');
-    }
+    // Helper to update all icons across all buttons
+    const updateIcons = () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        darkIcons.forEach(icon => {
+            if (isDark) icon.classList.add('hidden');
+            else icon.classList.remove('hidden');
+        });
+        lightIcons.forEach(icon => {
+            if (isDark) icon.classList.remove('hidden');
+            else icon.classList.add('hidden');
+        });
+    };
 
-    var themeToggleBtn = document.getElementById('theme-toggle');
+    // Set initial state
+    updateIcons();
 
-    if (themeToggleBtn) {
-        themeToggleBtn.onclick = function() {
-            // toggle icons inside button
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
-
-            // if set via local storage previously
+    themeToggleBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Toggle theme
             if (localStorage.getItem('color-theme')) {
                 if (localStorage.getItem('color-theme') === 'light') {
                     document.documentElement.classList.add('dark');
@@ -31,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.documentElement.classList.remove('dark');
                     localStorage.setItem('color-theme', 'light');
                 }
-            // if NOT set via local storage previously
             } else {
                 if (document.documentElement.classList.contains('dark')) {
                     document.documentElement.classList.remove('dark');
@@ -41,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('color-theme', 'dark');
                 }
             }
-        };
-    }
+            
+            // Update all icons
+            updateIcons();
+        });
+    });
 });
