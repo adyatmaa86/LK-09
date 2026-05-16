@@ -6,6 +6,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+
+# Tampilan Halaman Utama
 <p align="center">
     <img src="public/images/halamanU.png" width="500" alt="Halaman Utama AdyatmaBooks">
 </p>
