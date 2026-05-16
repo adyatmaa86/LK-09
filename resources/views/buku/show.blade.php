@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $buku->title }} | Detail Data Buku Digital</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="{{ asset('images/tabicon.png') }}">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <script src="{{ asset('js/theme-init.js') }}"></script>
+
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
-<body class="bg-[#f8fafc] text-[#1e293b] min-h-screen py-12">
+<body class="bg-[#f8fafc] text-[#1e293b] dark:bg-slate-900 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+    <x-navbar />
+    <div class="py-12">
+
     <div class="max-w-5xl mx-auto px-4">
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
             <a href="{{ route('buku.index') }}" class="inline-flex items-center text-sm font-semibold text-slate-500 hover:text-indigo-600 transition-colors">
@@ -19,7 +26,8 @@
             </a>
             
             <div class="flex gap-3">
-                <a href="{{ route('buku.edit', $buku) }}" class="inline-flex items-center px-5 py-2.5 bg-amber-50 text-amber-600 font-bold rounded-xl hover:bg-amber-100 transition-all border border-amber-100">
+                <a href="{{ route('buku.edit', $buku) }}" class="inline-flex items-center px-5 py-2.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 font-bold rounded-xl hover:bg-amber-100 dark:hover:bg-amber-900/40 transition-all border border-amber-100 dark:border-amber-900/30">
+
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                     </svg>
@@ -28,7 +36,8 @@
                 <form action="{{ route('buku.destroy', $buku) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus buku ini?')">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="inline-flex items-center px-5 py-2.5 bg-rose-50 text-rose-600 font-bold rounded-xl hover:bg-rose-100 transition-all border border-rose-100">
+                    <button type="submit" class="inline-flex items-center px-5 py-2.5 bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400 font-bold rounded-xl hover:bg-rose-100 dark:hover:bg-rose-900/40 transition-all border border-rose-100 dark:border-rose-900/30">
+
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                         </svg>
@@ -38,13 +47,16 @@
             </div>
         </div>
 
-        <div class="bg-white rounded-[3rem] shadow-2xl shadow-slate-200/50 overflow-hidden border border-slate-100">
+        <div class="bg-white dark:bg-slate-800 rounded-[3rem] shadow-2xl shadow-slate-200/50 overflow-hidden border border-slate-100 dark:border-slate-700">
+
             <div class="grid grid-cols-1 lg:grid-cols-12">
                 <!-- Left: Book Cover -->
-                <div class="lg:col-span-5 p-8 lg:p-12 bg-slate-50 flex items-center justify-center">
+                <div class="lg:col-span-5 p-8 lg:p-12 bg-slate-50 dark:bg-slate-900/50 flex items-center justify-center">
+
                     <div class="relative group">
                         <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-[2rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-                        <div class="relative bg-white rounded-[2rem] overflow-hidden shadow-2xl">
+                        <div class="relative bg-white dark:bg-slate-800 rounded-[2rem] overflow-hidden shadow-2xl">
+
                             @if($buku->cover)
                                 <img src="{{ asset('storage/' . $buku->cover) }}" alt="{{ $buku->title }}" class="w-full h-auto object-cover max-w-[320px]">
                             @else
@@ -64,7 +76,8 @@
                         <span class="px-4 py-1.5 bg-indigo-50 text-indigo-600 text-xs font-black rounded-full uppercase tracking-widest mb-4 inline-block cursor-default">
                             {{ $buku->category }}
                         </span>
-                        <h1 class="text-4xl lg:text-5xl font-black text-slate-900 leading-tight mb-4 cursor-default">{{ $buku->title }}</h1>
+                        <h1 class="text-4xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight mb-4 cursor-default">{{ $buku->title }}</h1>
+
                         <div class="flex items-center gap-4 text-slate-500">
                             <span class="flex items-center cursor-default">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1.5 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,23 +97,28 @@
 
                     <div class="space-y-8">
                         <div>
-                            <h3 class="text-sm font-black text-slate-900 uppercase tracking-widest mb-3 flex items-center cursor-default">
+                            <h3 class="text-sm font-black text-slate-900 dark:text-white uppercase tracking-widest mb-3 flex items-center cursor-default">
+
                                 <span class="w-2 h-[2px] bg-indigo-600 mr-2"></span>
                                 Sinopsis
                             </h3>
-                            <p class="text-lg text-slate-600 leading-relaxed cursor-default">
+                            <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed cursor-default">
+
                                 {{ $buku->description }}
                             </p>
                         </div>
 
-                        <div class="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100">
+                        <div class="grid grid-cols-2 gap-8 pt-8 border-t border-slate-100 dark:border-slate-700">
+
                             <div>
                                 <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 cursor-default">Penerbit</h4>
-                                <p class="text-lg font-bold text-slate-800 cursor-default">{{ $buku->publisher }}</p>
+                                <p class="text-lg font-bold text-slate-800 dark:text-slate-200 cursor-default">{{ $buku->publisher }}</p>
+
                             </div>
                             <div>
                                 <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 cursor-default">ID Koleksi</h4>
-                                <p class="text-lg font-bold text-slate-800 cursor-default">#Book-{{ str_pad($buku->id, 5, '0', STR_PAD_LEFT) }}</p>
+                                <p class="text-lg font-bold text-slate-800 dark:text-slate-200 cursor-default">#Book-{{ str_pad($buku->id, 5, '0', STR_PAD_LEFT) }}</p>
+
                             </div>
                         </div>
                     </div>
@@ -108,5 +126,11 @@
             </div>
         </div>
     </div>
+    </div> <!-- End py-12 -->
+
+    <div class="mt-auto">
+        <x-footer />
+    </div>
 </body>
+
 </html>

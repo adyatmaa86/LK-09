@@ -13,10 +13,13 @@
 1. Clone repository ini: `git clone https://github.com/adyatmaa86/LK-09.git`
 2. Masuk ke folder project: `cd LK-09`
 3. Install dependency PHP: `composer install`
-4. Ganti nama file .env.example menjadi .env
-5. Generate App Key: `php artisan key:generate`
-6. Sesuaikan setting database di file `.env`
-7. Jalankan migrasi: `php artisan migrate`
-8. Jalankan storage link: `php artisan storage:link`
-9. Jalankan server: `php artisan serve`
+4. Install dependency NPM: `npm install -D tailwindcss postcss autoprefixer`
+5. Lalu jalankan perintah: `npm run build`
+6. Ganti nama file .env.example menjadi .env
+7. Generate App Key: `php artisan key:generate`
+8. Sesuaikan setting database di file `.env`
+9. Jalankan migrasi: `php artisan migrate`
+10. Jalankan storage link: `php artisan storage:link`
+11. Jalankan server: `php artisan serve`
+12. Jalankan server npm: `npm run dev` 
 
