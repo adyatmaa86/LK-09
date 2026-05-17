@@ -13,10 +13,10 @@
 </p>
 
 # LK-09
-Nama: Achmad Helmy Aziz Adyatma
-Nim: 24102001
-Matkul: Pemograman Web
-Dosen Pengampu:  
+Nama: Achmad Helmy Aziz Adyatma<br>
+Nim: 24102001<br>
+Matkul: Pemograman Web<br>
+Dosen Pengampu: Ahsanun Naseh Khudori, S.Kom., M.Kom<br>
 Link Demo: https://bukudigital.dyt.my.id/buku
 
 ## Cara Instalasi
