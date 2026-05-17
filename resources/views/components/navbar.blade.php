@@ -36,7 +36,7 @@
 
             <!-- Mobile menu button -->
             <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" type="button" class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <button id="mobile-menu-button" type="button" class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors cursor-pointer">
                     <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -56,11 +56,11 @@
             
             <div class="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
                 <div class="flex items-center justify-between px-4 py-2">
-                    <div class="flex flex-col">
+                    <div class="flex flex-col cursor-default">
                         <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Pemilik</span>
                         <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Ceo Adyatma86</span>
                     </div>
-                    <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300">
+                    <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 cursor-pointer">
                         <svg class="theme-toggle-dark-icon hidden h-5 w-5 text-slate-500 dark:text-slate-400" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
                         </svg>
