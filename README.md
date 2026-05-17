@@ -13,6 +13,7 @@
 </p>
 
 # LK-09
+Link Demo: https://bukudigital.dyt.my.id/buku
 
 ## Cara Instalasi
 1. Clone repository ini: `git clone https://github.com/adyatmaa86/LK-09.git`
