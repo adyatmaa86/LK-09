@@ -7,11 +7,6 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Tampilan Halaman Utama
-<p align="center">
-    <img src="public/images/halamanU.png" width="500" alt="Halaman Utama AdyatmaBooks">
-</p>
-
 # LK-09
 Nama: Achmad Helmy Aziz Adyatma<br>
 Nim: 24102001<br>
@@ -35,11 +30,22 @@ Link Demo: https://bukudigital.dyt.my.id/buku
 
 ## Preview Aplikasi
 
+### Tampilan Halaman Utama
+<p align="center">
+    <img src="public/images/halamanU.png" width="500" alt="Halaman Utama AdyatmaBooks">
+</p>
+
 ### Halaman Tambah Buku
-<img src="public/images/create.png" width="500" alt="Tambah Buku">
+<p align="center">
+    <img src="public/images/create.png" width="500" alt="Tambah Buku">
+</p>
 
 ### Halaman Edit Buku
-<img src="public/images/edit.png" width="500" alt="Edit Buku">
+<p align="center">
+    <img src="public/images/edit.png" width="500" alt="Edit Buku">
+</p>
 
 ### Halaman Detail Buku
-<img src="public/images/show.png" width="500" alt="Detail Buku">
+<p align="center">
+    <img src="public/images/show.png" width="500" alt="Detail Buku">
+</p>
